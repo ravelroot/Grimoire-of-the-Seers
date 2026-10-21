@@ -1,0 +1,50 @@
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - ".github/atividade.txt"
+      - "README.md"
+      - "LICENSE"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  montar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Montar o site
+        run: |
+          mkdir -p _site/docs/images
+          cp -r index.html css js assets _site/
+          cp docs/images/logo.png _site/docs/images/
+
+      - name: Conferir o site montado
+        run: python3 .github/scripts/verificar.py _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  publicar:
+    needs: montar
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

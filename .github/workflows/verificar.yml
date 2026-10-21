@@ -1,0 +1,21 @@
+name: Verificar
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - ".github/atividade.txt"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Conferir arquivos e JavaScript
+        run: python3 .github/scripts/verificar.py .

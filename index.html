@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grimoire of the Seers</title>
+  <meta name="description" content="Oráculo de tarô inspirado nos 22 Caminhos de Lord of the Mysteries: leituras de carta única e de três cartas com a Convergência do Destino.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/cards/verso.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.topo, .mesa, .grimorio { opacity: 1; }</style></noscript>
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <img class="marca-selo" src="assets/logo.png" alt="" width="104" height="104">
+      <h1 class="marca-titulo">Grimoire of the Seers</h1>
+      <div class="marca-divisor" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 20 20"><path d="M10 0 L12 8 L20 10 L12 12 L10 20 L8 12 L0 10 L8 8 Z"/></svg>
+        <span></span>
+      </div>
+      <p class="marca-sub">Oráculo dos 22 Caminhos</p>
+    </div>
+
+    <div class="modos" role="group" aria-label="Modo de leitura">
+      <span class="modos-indicador" aria-hidden="true"></span>
+      <button type="button" class="modo" data-modo="unica" aria-pressed="true">Carta única</button>
+      <button type="button" class="modo" data-modo="tripla" aria-pressed="false">Carta tripla</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="mesa" id="mesa" aria-label="Mesa de leitura">
+      <div class="monte-area">
+        <button type="button" class="monte" id="monte" aria-label="Tirar uma carta do monte">
+          <span class="monte-camada"></span>
+          <span class="monte-camada"></span>
+          <span class="monte-camada"></span>
+          <span class="monte-camada"></span>
+          <span class="monte-camada"></span>
+          <span class="monte-camada"></span>
+        </button>
+        <p class="monte-contagem" id="contagem">22 cartas no monte</p>
+      </div>
+
+      <div class="slots" id="slots"></div>
+
+      <aside class="painel" aria-label="Controle da leitura">
+        <div class="progresso" id="progresso" role="img" aria-label="Cartas reveladas"></div>
+        <p class="progresso-texto" id="progresso-texto"></p>
+        <p class="dica" id="dica"></p>
+        <div class="painel-acoes">
+          <button type="button" class="botao" id="btn-embaralhar">Embaralhar</button>
+          <button type="button" class="botao botao-discreto" id="btn-nova">Nova leitura</button>
+        </div>
+      </aside>
+
+      <svg class="fios" id="fios" aria-hidden="true"></svg>
+    </section>
+
+    <article class="grimorio" id="grimorio" aria-live="polite"></article>
+  </main>
+
+  <footer class="rodape">
+    <p>Copyright (©) 2026 Clara A. Portes</p>
+    <p class="rodape-nota">Projeto de fã inspirado em <cite>Lord of the Mysteries</cite>. Para entretenimento e reflexão.</p>
+  </footer>
+
+  <dialog class="dialogo" id="dialogo" aria-labelledby="dialogo-titulo">
+    <button type="button" class="dialogo-fechar" id="dialogo-fechar" aria-label="Fechar">×</button>
+    <div class="dialogo-corpo">
+      <figure class="dialogo-carta" id="dialogo-carta"></figure>
+      <div class="dialogo-texto" id="dialogo-texto"></div>
+    </div>
+  </dialog>
+
+  <div class="sr-only" aria-live="assertive" id="anuncio"></div>
+
+  <script src="js/cards.js" defer></script>
+  <script src="js/oracle.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
