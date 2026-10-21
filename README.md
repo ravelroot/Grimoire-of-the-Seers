@@ -2,7 +2,7 @@
   <img src="docs/images/logo-readme.png" width="320" alt="Grimoire of the Seers">
 </p>
 
-<h1 align="center">Grimoire of the Seers<br><sub><sup><sup><sub>Copyright (©) 2026 Erik Pimenta e Clara Portes</sub></sup></sup></sub></h1>
+<h1 align="center">Grimoire of the Seers<br><sub><sup><sup><sub>Copyright (©) 2026 Erik Pimenta &amp; Clara Portes</sub></sup></sup></sub></h1>
 
 <p align="center">
   Oráculo de tarô inspirado nos 22 Caminhos de <i>Lord of the Mysteries</i>. Cada Arcano Maior corresponde a um Caminho Beyonder, da Sequência 9 à Sequência 0.<br>
