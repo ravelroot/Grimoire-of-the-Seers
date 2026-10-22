@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="docs/images/logo-readme.png" width="320" alt="Grimoire of the Seers">
+  <img src="docs/images/logo-readme.png" width="320" alt="Grimório dos Videntes">
 </p>
 
-<h1 align="center">Grimoire of the Seers<br><sub><sup><sup><sub>Copyright (©) 2026 Erik Pimenta &amp; Clara Portes</sub></sup></sup></sub></h1>
+<h1 align="center">Grimório dos Videntes
+<br><sub><sup><sup><sub>Copyright (©) 2026 Erik Pimenta &amp; Clara Portes</sub></sup></sup></sub></h1>
 
 <p align="center">
   Oráculo de tarô inspirado nos 22 Caminhos de <i>Lord of the Mysteries</i>. Cada Arcano Maior corresponde a um Caminho Beyonder, da Sequência 9 à Sequência 0.<br>
@@ -15,7 +16,7 @@
 
 Feito com HTML5, CSS3 e JavaScript puro. Sem frameworks, sem build, sem dependências externas: as fontes estão no próprio repositório e o projeto funciona até offline.
 
-## O que o Grimoire faz
+## O que o Grimório dos Videntes faz
 
 - **Carta única**: sorteia um arcano, revela o Caminho correspondente e escreve no grimório uma leitura completa: essência, interpretação, sombra, conselho e método de atuação.
 - **Carta tripla**: tira até três cartas em sequência (Origem, Travessia e Destino). Quando as três são reveladas, a Convergência do Destino é calculada na hora.
