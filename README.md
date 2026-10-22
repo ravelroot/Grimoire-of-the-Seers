@@ -139,7 +139,7 @@ Grimoire-of-the-Seers/
 
 ## Parceria
 
-Projeto desenvolvido em parceria com parceira de projetos e de vida **Clara Portes** ([@Violet-star](https://github.com/Violet-star)).
+Projeto desenvolvido em parceria com minha parceira de projetos e de vida **Clara Portes** ([@Violet-star](https://github.com/Violet-star)).
 
 ## Aviso
 
